@@ -13,34 +13,29 @@ public class Item {
 	}
 	public String toString() {
 
+		
+		// Write your codes here
 		String itemInfo = String.format("%-10s %-30s %-10s %-10s",
-				 assetTag,
-				 description,
-				 showAvailability(isAvailable),
-				 dueDate);
-
-		return itemInfo;
-	}
-
-	
-	 
+			     assetTag,
+			     description,
+			     showAvailability(isAvailable),
+			     dueDate);
+			  
+			  return itemInfo ;
+			 }
 	public String showAvailability(boolean isAvailable) {
-		 String avail;
+		String avail;
 
 		if (isAvailable == true) {
-			 avail = "Yes";
+			avail = "Yes";
 		} else {
-			 avail = "No";
+			avail = "No";
 		}
-		 return avail;
-		}
+		return avail; 
+	}
 
-		
-	
-
-	
 	public String getAssetTag() {
-		return assetTag;
+		return assetTag ;
 	}
 
 	public String getDescription() {
@@ -54,6 +49,7 @@ public class Item {
 	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
+	
 
 	public boolean getIsAvailable() {
 		return isAvailable;
