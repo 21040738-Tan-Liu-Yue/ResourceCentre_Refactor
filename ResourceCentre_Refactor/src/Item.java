@@ -18,6 +18,7 @@ public class Item {
 				 showAvailability(isAvailable),
 				 dueDate);
 		
+
 		return null;
 	}
 	public String showAvailability(boolean isAvailable) {
@@ -30,6 +31,8 @@ public class Item {
 		}
 		return avail;
 	}
+
+	
 	public String getAssetTag() {
 		return assetTag;
 	}
