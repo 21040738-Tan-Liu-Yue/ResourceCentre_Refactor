@@ -6,24 +6,23 @@ public class Item {
 	private boolean isAvailable;
 
 	public Item(String assetTag, String description) {
-		this.assetTag = assetTag;
+		this.assetTag = assetTag ;
 		this.description = description;
 		this.dueDate = "";
-		this.isAvailable = true;
+		this.isAvailable = true ;
 	}
 	public String toString() {
 
 		
 		// Write your codes here
-		String itemInfo = String.format("%-10s %-30s %-10s %-10s", 
-				assetTag,
-				description,
-				showAvailability(isAvailable),
-				dueDate);
-		
-		return itemInfo;
-	}
-
+		String itemInfo = String.format("%-10s %-30s %-10s %-10s",
+			     assetTag,
+			     description,
+			     showAvailability(isAvailable),
+			     dueDate);
+			  
+			  return itemInfo ;
+			 }
 	public String showAvailability(boolean isAvailable) {
 		String avail;
 
@@ -36,7 +35,7 @@ public class Item {
 	}
 
 	public String getAssetTag() {
-		return assetTag;
+		return assetTag ;
 	}
 
 	public String getDescription() {
@@ -50,6 +49,7 @@ public class Item {
 	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
+	
 
 	public boolean getIsAvailable() {
 		return isAvailable;

@@ -11,7 +11,7 @@ public class ResourceCentre {
 	public static void main(String[] args) {
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
-		ArrayList<Chromebook> chromebookList = new ArrayList<Chromebook>();
+		ArrayList<Chromebook> chromebookList = new ArrayList<Chromebook>() ;
 
 		camcorderList.add(new Camcorder("CC001", "Sony HDR-CX405", 35));
 		camcorderList.add(new Camcorder("CC002", "Panasonic HC-MDH2", 10));
@@ -20,8 +20,6 @@ public class ResourceCentre {
 
 		int option = 0;
 
-
-		while (option != 4) {
 
 		while (option != OPTION_QUIT) {
 
@@ -46,6 +44,7 @@ public class ResourceCentre {
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
 					System.out.println("Camcorder added");
+					
 
 				} else if (itemType == 2) {
 					// Add Chromebook
@@ -99,8 +98,7 @@ public class ResourceCentre {
 		}
 		}
 
-	}
-
+	
 
 
 	public static void itemTypeMenu() {
@@ -139,41 +137,45 @@ public class ResourceCentre {
 
 	//================================= Option 1 View (CRUD - Read) =================================
 
-	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) { 
-		  String output = ""; 
-		 
-		  for (int i = 0; i < camcorderList.size(); i++) { 
-		 
-		   output += String.format("%84s\n", camcorderList.get(i).toString()); 
-		  } 
-		  return output ; 
-		 } 
-		 public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) { 
-		  ResourceCentre.setHeader("CAMCORDER LIST"); 
-		  String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION", 
-		    "AVAILABLE", "DUE DATE","OPTICAL ZOOM"); 
-		   output += retrieveAllCamcorder(camcorderList);  
-		  System.out.println(output); 
-		 } 
-		 
-		 public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) { 
-		  String output = ""; 
-		  // write your code here 
-		  for (int i = 0; i < chromebookList.size(); i++) { 
-		 
-		   output += String.format("%84s\n", chromebookList.get(i).toString()); 
-		  } 
-		  return output; 
-		 } 
-		 public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) { 
-		   
-		  ResourceCentre.setHeader("CHROMEBOOK LIST"); 
-		  String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION", 
-		     "AVAILABLE", "DUE DATE","OPERATING SYSTEM"); 
-		   output += retrieveAllChromebook(chromebookList); 
-		  System.out.println(output); 
-		 }
-	
+	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
+		String output = "";
+
+		for (int i = 0; i < camcorderList.size(); i++) {
+
+			output += String.format("%-84s\n", camcorderList.get(i).toString());
+		}
+		return output;
+	}
+	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
+		ResourceCentre.setHeader("CAMCORDER LIST");
+		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
+				"AVAILABLE", "DUE DATE","OPTICAL ZOOM");
+		 output += retrieveAllCamcorder(camcorderList);	
+		System.out.println(output);
+	}
+
+	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
+		String output = "";
+		// write your code here
+		for (int i = 0; i < chromebookList.size(); i++) {
+
+			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
+					chromebookList.get(i).getDescription(), 
+					ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
+					chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
+		}
+		return output;
+	}
+	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
+		
+		ResourceCentre.setHeader("CHROMEBOOK LIST");
+		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
+				 "AVAILABLE", "DUE DATE","OPERATING SYSTEM");
+		 output += retrieveAllChromebook(chromebookList);
+		System.out.println(output);
+	}
+
+
 
 	//================================= Option 2 Add (CRUD - Create)=================================
 	public static Camcorder inputCamcorder() {
