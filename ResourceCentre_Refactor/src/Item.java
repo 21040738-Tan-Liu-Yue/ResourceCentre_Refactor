@@ -21,7 +21,7 @@ public class Item {
 			     showAvailability(isAvailable),
 			     dueDate);
 			  
-			  return itemInfo;
+			  return itemInfo ;
 			 }
 			 public String showAvailability(boolean isAvailable) {
 			  String avail;

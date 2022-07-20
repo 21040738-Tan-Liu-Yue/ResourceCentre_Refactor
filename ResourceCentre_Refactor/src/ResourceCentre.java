@@ -21,7 +21,7 @@ public class ResourceCentre {
 		int option = 0;
 
 
-		while (option != 4) {
+		while (option != 4 ) {
 
 		while (option != OPTION_QUIT) {
 
