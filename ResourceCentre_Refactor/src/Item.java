@@ -6,7 +6,7 @@ public class Item {
 	private boolean isAvailable;
 
 	public Item(String assetTag, String description) {
-		this.assetTag = assetTag;
+		this.assetTag = assetTag ;
 		this.description = description;
 		this.dueDate = "";
 		this.isAvailable = true ;
