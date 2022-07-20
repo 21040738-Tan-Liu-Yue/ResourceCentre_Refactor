@@ -42,6 +42,7 @@ public class ResourceCentre {
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
 					System.out.println("Camcorder added");
+					
 
 				} else if (itemType == 2) {
 					// Add Chromebook

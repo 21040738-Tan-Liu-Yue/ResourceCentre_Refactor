@@ -37,6 +37,7 @@ public class Item {
 	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
+	
 
 	public boolean getIsAvailable() {
 		return isAvailable;
