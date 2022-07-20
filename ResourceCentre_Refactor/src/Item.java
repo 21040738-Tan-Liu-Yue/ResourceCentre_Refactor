@@ -40,7 +40,7 @@ public class Item {
 
 	
 	public String getAssetTag() {
-		return assetTag;
+		return assetTag ;
 	}
 
 	public String getDescription() {
