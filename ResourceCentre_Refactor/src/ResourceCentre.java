@@ -20,7 +20,9 @@ public class ResourceCentre {
 
 		int option = 0;
 
+
 		while (option != OPTION_QUIT) {
+
 
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
@@ -94,12 +96,11 @@ public class ResourceCentre {
 			}
 
 		}
+		}
 
-	}
+	
 
-	/**
-	 * 
-	 */
+
 	public static void itemTypeMenu() {
 		ResourceCentre.setHeader("ITEM TYPES");
 		System.out.println("1. Camcorder");
@@ -132,9 +133,10 @@ public class ResourceCentre {
 			avail = "No";
 		}
 		return avail;
-	}
+	}	
 
 	//================================= Option 1 View (CRUD - Read) =================================
+
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		String output = "";
 
@@ -172,6 +174,10 @@ public class ResourceCentre {
 		 output += retrieveAllChromebook(chromebookList);
 		System.out.println(output);
 	}
+
+
+
+
 
 	//================================= Option 2 Add (CRUD - Create)=================================
 	public static Camcorder inputCamcorder() {
