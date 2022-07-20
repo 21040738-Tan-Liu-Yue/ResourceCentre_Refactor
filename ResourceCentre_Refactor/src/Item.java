@@ -12,14 +12,14 @@ public class Item {
 		this.isAvailable = true;
 	}
 	public String toString() {
-		String itemInfo = String.format("%-10s %-30s %-10b %-20s\n",
+		String itemInfo = String.format("%-10s %-30s %-10s %-10s",
 				 assetTag,
 				 description,
 				 showAvailability(isAvailable),
 				 dueDate);
 		
 
-		return null;
+		return itemInfo;
 	}
 	public String showAvailability(boolean isAvailable) {
 		String avail;
