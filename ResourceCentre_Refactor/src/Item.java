@@ -32,7 +32,7 @@ public class Item {
 		} else {
 			avail = "No";
 		}
-		return avail; 
+		return avail ; 
 	}
 
 	public String getAssetTag() {

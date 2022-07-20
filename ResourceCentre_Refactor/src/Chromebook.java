@@ -8,7 +8,7 @@ public class Chromebook extends Item{
 	}
 
 	public String getOs() {
-		return os;
+		return os ;
 	}
 	
 

@@ -163,7 +163,7 @@ public class ResourceCentre {
 		 
 		   output += String.format("%84s\n", chromebookList.get(i).toString()); 
 		  } 
-		  return output; 
+		  return output ; 
 		 } 
 		 public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) { 
 		   
