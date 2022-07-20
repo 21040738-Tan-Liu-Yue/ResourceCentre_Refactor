@@ -138,6 +138,10 @@ public class ResourceCentre {
 	}
 
 	//================================= Option 1 View (CRUD - Read) =================================
+
+
+
+
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) { 
 		  String output = ""; 
 		 
@@ -173,6 +177,7 @@ public class ResourceCentre {
 		  System.out.println(output); 
 		 }
 
+	
 
 
 	//================================= Option 2 Add (CRUD - Create)=================================
