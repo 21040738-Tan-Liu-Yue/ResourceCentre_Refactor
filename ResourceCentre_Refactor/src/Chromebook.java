@@ -1,6 +1,6 @@
 
 public class Chromebook extends Item{
-	private String os;
+	private String os ;
 
 	public Chromebook(String assetTag, String description, String os) {
 		super(assetTag, description);
