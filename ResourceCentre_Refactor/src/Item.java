@@ -23,21 +23,17 @@ public class Item {
 			  
 			  return itemInfo ;
 			 }
-			 public String showAvailability(boolean isAvailable) {
-			  String avail;
+	public String showAvailability(boolean isAvailable) {
+		String avail;
 
-			  if (isAvailable == true) {
-			   avail = "Yes";
-			  } else {
-			   avail = "No";
-			  }
-			  return avail;
-			 }
+		if (isAvailable == true) {
+			avail = "Yes";
+		} else {
+			avail = "No";
+		}
+		return avail; 
+	}
 
-		
-	
-
-	
 	public String getAssetTag() {
 		return assetTag;
 	}
@@ -53,6 +49,7 @@ public class Item {
 	public void setDueDate(String dueDate) {
 		this.dueDate = dueDate;
 	}
+	
 
 	public boolean getIsAvailable() {
 		return isAvailable;
