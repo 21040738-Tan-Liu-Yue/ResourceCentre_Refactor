@@ -6,10 +6,13 @@ public class Item {
 	private boolean isAvailable;
 
 	public Item(String assetTag, String description) {
-		this.assetTag = assetTag;
+		this.assetTag = assetTag ;
 		this.description = description;
+
+
 		this.dueDate = "";
-		this.isAvailable = true;
+
+		this.isAvailable = true ;
 	}
 	public String toString() {
 
@@ -19,7 +22,7 @@ public class Item {
 			     assetTag,
 			     description,
 			     showAvailability(isAvailable),
-			     dueDate);
+			     dueDate); 
 			  
 			  return itemInfo ;
 			 }
@@ -31,11 +34,11 @@ public class Item {
 		} else {
 			avail = "No";
 		}
-		return avail; 
+		return avail ; 
 	}
 
 	public String getAssetTag() {
-		return assetTag;
+		return assetTag ;
 	}
 
 	public String getDescription() {
