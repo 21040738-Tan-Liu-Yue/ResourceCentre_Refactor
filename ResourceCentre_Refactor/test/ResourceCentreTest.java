@@ -120,7 +120,7 @@ public class ResourceCentreTest {
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		// normal
 		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
-		assertTrue("Test if an available item is ok to loan?", ok);
+		assertTrue("Test if an available item is ok to loan?", ok) ;
 		//error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
 		assertFalse("Test if an same item is NOT ok to loan again?", ok);	

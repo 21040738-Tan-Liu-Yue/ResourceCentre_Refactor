@@ -179,7 +179,7 @@ public class ResourceCentre {
 
 	//================================= Option 2 Add (CRUD - Create)=================================
 	public static Camcorder inputCamcorder() {
-		String tag = Helper.readString("Enter asset tag > ");
+		String tag = Helper.readString("Enter asset tag > ") ;
 		String description = Helper.readString("Enter description > ") ;
 		int zoom = Helper.readInt("Enter optical zoom > ");
 
