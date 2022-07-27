@@ -142,9 +142,12 @@ public class ResourceCentre {
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		String output = "";
 
-		for (int i = 0; i < camcorderList.size(); i++) {
+	//	for (int i = 0; i < camcorderList.size(); i++) {
 
-			output += String.format("%-84s\n", camcorderList.get(i).toString())  ;
+	//		output += String.format("%-84s\n", camcorderList.get(i).toString())  ;
+	//	}
+		for (Camcorder i : camcorderList) {
+			output += i.toString();
 		}
 		return output;
 	}
@@ -159,12 +162,14 @@ public class ResourceCentre {
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
-		for (int i = 0; i < chromebookList.size(); i++) {
+	//	for (int i = 0; i < chromebookList.size(); i++) {
 
-			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
-					chromebookList.get(i).getDescription(), 
-					ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
-					chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
+	//		output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(),
+	//				chromebookList.get(i).getDescription(), 
+	//				ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()),
+	//				chromebookList.get(i).getDueDate(),chromebookList.get(i).getOs());
+		for (Chromebook i : chromebookList) {
+			output += i.toString();
 		}
 		return output;
 	}

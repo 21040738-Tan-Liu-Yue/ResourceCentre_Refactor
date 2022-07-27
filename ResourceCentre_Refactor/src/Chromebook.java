@@ -22,7 +22,7 @@ public class Chromebook extends Item{
 
 
 		String output = super.toString();
-		output = String.format("%-63s %-20d", output, os)  ;
+		output += String.format("%-20s\n", os)  ;
 
 		
 
