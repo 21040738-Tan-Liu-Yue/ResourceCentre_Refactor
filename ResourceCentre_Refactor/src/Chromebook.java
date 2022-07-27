@@ -4,7 +4,7 @@ public class Chromebook extends Item{
 
 	public Chromebook(String assetTag, String description, String os) {
 
-		super(assetTag, description);
+		super(assetTag, description) ;
 		this.os = os;
 
 	}
