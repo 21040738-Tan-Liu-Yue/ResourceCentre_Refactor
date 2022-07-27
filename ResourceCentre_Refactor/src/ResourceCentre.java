@@ -92,7 +92,7 @@ public class ResourceCentre {
 			} else if (option == OPTION_QUIT) {
 				System.out.println("Bye!");
 			} else {
-				System.out.println("Invalid option");
+				System.out.println("Invalid option"); 
 			}
 
 		}

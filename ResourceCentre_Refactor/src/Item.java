@@ -19,7 +19,7 @@ public class Item {
 			     assetTag,
 			     description,
 			     showAvailability(isAvailable),
-			     dueDate);
+			     dueDate); 
 			  
 			  return itemInfo ;
 			 }

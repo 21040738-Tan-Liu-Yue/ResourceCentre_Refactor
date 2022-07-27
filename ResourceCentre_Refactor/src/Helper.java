@@ -13,7 +13,7 @@ public class Helper {
 
   public static int readInt(String prompt) {
     int input = 0;
-    boolean valid = false;
+    boolean valid = false; 
     while (!valid) {
       try {
         input = Integer.parseInt(readString(prompt));
