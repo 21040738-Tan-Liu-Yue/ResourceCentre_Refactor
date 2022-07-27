@@ -8,7 +8,7 @@ public class Item {
 	public Item(String assetTag, String description) {
 		this.assetTag = assetTag;
 		this.description = description;
-		this.dueDate = "";
+		this.dueDate = "" ;
 		this.isAvailable = true ;
 	}
 	public String toString() {
