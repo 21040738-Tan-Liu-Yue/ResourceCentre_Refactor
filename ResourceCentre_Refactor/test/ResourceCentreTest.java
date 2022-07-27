@@ -13,7 +13,7 @@ public class ResourceCentreTest {
 	private Chromebook cb2;
 	
 	private ArrayList<Camcorder> camcorderList;
-	private ArrayList<Chromebook> chromebookList;
+	private ArrayList<Chromebook> chromebookList ;
 	
 	public ResourceCentreTest() {
 		super();
@@ -120,7 +120,7 @@ public class ResourceCentreTest {
 		ResourceCentre.addCamcorder(camcorderList, cc1);
 		// normal
 		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
-		assertTrue("Test if an available item is ok to loan?", ok);
+		assertTrue("Test if an available item is ok to loan?", ok) ;
 		//error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
 		assertFalse("Test if an same item is NOT ok to loan again?", ok);	
@@ -131,7 +131,7 @@ public class ResourceCentreTest {
 		assertFalse("Test that un-available item is NOT ok to loan?", ok);
 		//error condition
 		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "8-8-2020" );
-		assertFalse("Test that non-esiting item is NOT ok to loan?", ok);
+		assertFalse("Test that non-esiting item is NOT ok to loan?", ok) ;
 		
 	}
 	

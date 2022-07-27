@@ -10,7 +10,9 @@ public class ResourceCentre {
 	private static final int OPTION_QUIT = 5;
 	public static void main(String[] args) {
 
-		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>() ;
+ 
+		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
+
 		ArrayList<Chromebook> chromebookList = new ArrayList<Chromebook>() ;
 
 		camcorderList.add(new Camcorder("CC001", "Sony HDR-CX405", 35));
@@ -92,7 +94,7 @@ public class ResourceCentre {
 			} else if (option == OPTION_QUIT) {
 				System.out.println("Bye!");
 			} else {
-				System.out.println("Invalid option");
+				System.out.println("Invalid option"); 
 			}
 
 		}
@@ -179,8 +181,8 @@ public class ResourceCentre {
 
 	//================================= Option 2 Add (CRUD - Create)=================================
 	public static Camcorder inputCamcorder() {
-		String tag = Helper.readString("Enter asset tag > ");
-		String description = Helper.readString("Enter description > ");
+		String tag = Helper.readString("Enter asset tag > ") ;
+		String description = Helper.readString("Enter description > ") ;
 		int zoom = Helper.readInt("Enter optical zoom > ");
 
 		Camcorder cc= new Camcorder(tag, description, zoom);
